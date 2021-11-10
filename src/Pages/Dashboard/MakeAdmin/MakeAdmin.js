@@ -10,13 +10,14 @@ const MakeAdmin = () => {
     return (
         <div class="col-lg-4 col-sm-12 mx-auto">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <h1 class="h3 mb-3 fw-normal">Please choose an user to make admin</h1>
-
-                <select {...register("Select User ", { required: true })}>
-                    <option value="Tarikul">Tarikul</option>
-                    <option value="Ujjal">Ujjal</option>
-                    <option value="Raju">Raju</option>
-                </select>
+                <h3 class="h3 mb-3 fw-normal">Choose an user to make admin</h3>
+                <div class="form-floating mb-2">
+                    <select {...register("Select User ", { required: true })} className="form-control">
+                        <option value="Tarikul">Tarikul</option>
+                        <option value="Ujjal">Ujjal</option>
+                        <option value="Raju">Raju</option>
+                    </select>
+                </div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Make Admin</button>
                 <p>{result}</p>
             </form>
