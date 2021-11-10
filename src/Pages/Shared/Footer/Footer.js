@@ -3,8 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer>
-            <div className="footer-bottom">
+        <footer className="footer-bottom">
                 <div className="container">
                     <div className="row p-3">
                         <div className="col-lg-6 col-12 d-flex align-items-center">
@@ -22,7 +21,6 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
         </footer>
     );
 };
