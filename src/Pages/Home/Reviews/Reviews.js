@@ -40,7 +40,7 @@ const Reviews = () => {
                     <p>
                       {[...Array(parseInt(review.review_count))].map((e, i) => (
                         <span key={i}>
-                          <i class="fas fa-star review"></i>
+                          <i className="fas fa-star review"></i>
                         </span>
                       ))}
                     </p>
