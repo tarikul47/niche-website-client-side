@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signOut,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import initializeFirebase from "../Pages/Login/Firebase/fiebase.init";
 
@@ -16,14 +19,56 @@ const useFirebase = () => {
   const auth = getAuth();
 
   // User Register method
-  const registerUser = (email, password, history) => {
+  const registerUser = (email, password, name, history) => {
     setloading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
+        const updateUser = { email:email, displayName: name };
+        setUser(updateUser);
+
+        // update the user displayName
+        updateProfile(auth.currentUser, {
+          displayName: name,
+        })
+          .then(() => {
+            // Profile updated!
+            // ...
+          })
+          .catch((error) => {
+            // An error occurred
+            // ...
+          });
+        setAuthError('');
+        console.log(result.user);
+        history.push('/');
+      })
+      .catch((error) => {
+        setAuthError(error.message);
+      })
+      .finally(() => setloading(false));
+  };
+
+  // observer user this.state
+  useEffect(() => {
+    const unsubscribed = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser({});
+      }
+      setloading(false);
+    });
+    return () => unsubscribed;
+  }, [auth]);
+
+  // login User with email and password
+  const loginUser = (email, password, location, history) => {
+    setloading(true);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const destination = location?.state?.from || "/";
+        history.push(destination);
         setAuthError("");
-        setUser(result.user);
-        history.push("/");
-        console.log(result);
       })
       .catch((error) => {
         setAuthError(error.message);
@@ -49,6 +94,7 @@ const useFirebase = () => {
     user,
     authError,
     loading,
+    loginUser,
     logOut,
   };
 };

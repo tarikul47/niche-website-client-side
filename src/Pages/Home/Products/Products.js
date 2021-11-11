@@ -19,8 +19,8 @@ const Products = () => {
                         <div className="single-product">
                             <div className="product-image">
                                 <img src="https://i.ibb.co/92mz8yB/polycarbonates-sunglass-for-unisex-sun1010202-415.jpg" alt="#"/>
-                                <div class ="button">
-                                <a href="product-details.html" class ="btn"><i class ="lni lni-cart"></i> Add to Cart</a>
+                                <div className="button">
+                                <a href="product-details.html" className="btn"><i className="lni lni-cart"></i> Add to Cart</a>
                                 </div>
                             </div>
                             <div className="product-info">
@@ -41,8 +41,8 @@ const Products = () => {
                         <div className="single-product">
                             <div className="product-image">
                                 <img src="https://i.ibb.co/SNL2mjZ/polycarbonates-sunglass-for-male-sun-2.jpg" alt="#"/>
-                                <div class ="button">
-                                <a href="product-details.html" class ="btn"><i class ="lni lni-cart"></i> Add to Cart</a>
+                                <div className="button">
+                                <a href="product-details.html" className="btn"><i className="lni lni-cart"></i> Add to Cart</a>
                                 </div>
                             </div>
                             <div className="product-info">
@@ -63,8 +63,8 @@ const Products = () => {
                         <div className="single-product">
                             <div className="product-image">
                                 <img src="https://i.ibb.co/bJvkpzg/polycarbonates-sunglass-for-male-sun-3.jpg" alt="#"/>
-                                <div class ="button">
-                                <a href="product-details.html" class ="btn"><i class ="lni lni-cart"></i> Add to Cart</a>
+                                <div className="button">
+                                <a href="product-details.html" className="btn"><i className="lni lni-cart"></i> Add to Cart</a>
                                 </div>
                             </div>
                             <div className="product-info">
@@ -85,8 +85,8 @@ const Products = () => {
                         <div className="single-product">
                             <div className="product-image">
                                 <img src="https://demo.graygrids.com/themes/shopgrids/assets/images/products/product-1.jpg" alt="#"/>
-                                <div class ="button">
-                                <a href="product-details.html" class ="btn"><i class ="lni lni-cart"></i> Add to Cart</a>
+                                <div className="button">
+                                <a href="product-details.html" className="btn"><i className="lni lni-cart"></i> Add to Cart</a>
                                 </div>
                             </div>
                             <div className="product-info">
@@ -107,8 +107,8 @@ const Products = () => {
                         <div className="single-product">
                             <div className="product-image">
                                 <img src="https://demo.graygrids.com/themes/shopgrids/assets/images/products/product-1.jpg" alt="#"/>
-                                <div class ="button">
-                                <a href="product-details.html" class ="btn"><i class ="lni lni-cart"></i> Add to Cart</a>
+                                <div className="button">
+                                <a href="product-details.html" className="btn"><i className="lni lni-cart"></i> Add to Cart</a>
                                 </div>
                             </div>
                             <div className="product-info">
@@ -129,8 +129,8 @@ const Products = () => {
                         <div className="single-product">
                             <div className="product-image">
                                 <img src="https://demo.graygrids.com/themes/shopgrids/assets/images/products/product-1.jpg" alt="#"/>
-                                <div class ="button">
-                                <a href="product-details.html" class ="btn"><i class ="lni lni-cart"></i> Add to Cart</a>
+                                <div className="button">
+                                <a href="product-details.html" className="btn"><i className="lni lni-cart"></i> Add to Cart</a>
                                 </div>
                             </div>
                             <div className="product-info">

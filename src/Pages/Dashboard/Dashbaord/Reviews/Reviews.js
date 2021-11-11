@@ -14,15 +14,15 @@ const Reviews = () => {
 
                 <div className="form-floating mb-2">
                     <input {...register("user_name", { required: true })} className="form-control" id="floatingInput" placeholder="User Name" />
-                    <label for="floatingInput">User Name</label>
+                    <label htmlFor="floatingInput">User Name</label>
                 </div>
                 <div className="form-floating mb-2">
-                    <input {...register("email")} className="form-control" id="floatingInput" placeholder="name@example.com" autocomplete="off" />
-                    <label for="floatingInput">Email address</label>
+                    <input {...register("email")} className="form-control" id="floatingInput" placeholder="name@example.com" autoComplete="off" />
+                    <label htmlFor="floatingInput">Email address</label>
                 </div>
                 <div className="form-floating mb-2">
                     <textarea {...register("user_reviews", { required: true })} placeholder="Product Description" id="product_description" className="form-control" />
-                    <label for="product_description">User Reviews</label>
+                    <label htmlFor="product_description">User Reviews</label>
                 </div>
 
                 <div className="form-floating mb-2">
