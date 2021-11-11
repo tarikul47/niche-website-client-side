@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from "react-router-dom";
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import AddProduct from '../AddProduct/AddProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import ManageOrders from '../ManageOrders/ManageOrders';
@@ -8,7 +8,6 @@ import MyOrders from '../MyOrders/MyOrders';
 import "./Dashboard.css";
 import Pay from './Pay/Pay';
 import Reviews from './Reviews/Reviews';
-
 
 const Dashboard = () => {
 
@@ -57,7 +56,7 @@ const Dashboard = () => {
                                 </Link>
                             </li>
                             <li>
-                                <button type="button" class="btn btn-link text-decoration-none">Logout</button>
+                                <button type="button" className="btn btn-link text-decoration-none">Logout</button>
                             </li>
                         </ul>
                     </div>

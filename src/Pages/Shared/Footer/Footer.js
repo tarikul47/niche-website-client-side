@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,7 +9,7 @@ const Footer = () => {
                     <div className="row p-3">
                         <div className="col-lg-6 col-12 d-flex align-items-center">
                             <div className="copyright">
-                                <p>Designed and Developed by <a href="https://onlytarikul.com/" target="_blank">Tarikul Islam</a>
+                                <p>Designed and Developed by <Link to="https://onlytarikul.com/" target='_blank'>Tarikul Islam</Link>
                                 </p>
                             </div>
                         </div>
@@ -25,3 +26,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
