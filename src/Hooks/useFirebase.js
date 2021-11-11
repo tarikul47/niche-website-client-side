@@ -39,7 +39,7 @@ const useFirebase = () => {
             // ...
           });
         setAuthError('');
-        console.log(result.user);
+        //console.log(result.user);
         history.push('/');
       })
       .catch((error) => {

@@ -7,7 +7,7 @@ import ManageProducts from '../ManageProducts/ManageProducts';
 import MyOrders from '../MyOrders/MyOrders';
 import "./Dashboard.css";
 import Pay from './Pay/Pay';
-import Reviews from './Reviews/Reviews';
+import ReviewForm from './ReviewForm/ReviewForm';
 
 const Dashboard = () => {
 
@@ -83,7 +83,7 @@ const Dashboard = () => {
                                         <MyOrders></MyOrders>
                                     </Route>
                                     <Route path={`${path}/reviews`}>
-                                        <Reviews></Reviews>
+                                        <ReviewForm></ReviewForm>
                                     </Route>
                                     <Route path={`${path}/pay`}>
                                         <Pay></Pay>

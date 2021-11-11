@@ -8,6 +8,7 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import Dashboard from "./Pages/Dashboard/Dashbaord/Dashboard";
 import Products from "./Pages/Home/Products/Products";
 import AuthProvider from "./Contexts/AuthProvider/AuthProvider";
+import Purchase from "./Pages/Purchase/Purchase";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/shop">
               <Products></Products>
+            </Route>
+            <Route path="/purchase/:pid">
+              <Purchase></Purchase>
             </Route>
             <Route path="/dashboard">
               <Dashboard></Dashboard>
