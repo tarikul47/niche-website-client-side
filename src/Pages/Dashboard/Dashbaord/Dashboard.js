@@ -61,7 +61,7 @@ const Dashboard = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-lg-10 col-sm-12 d-flex align-items-center justify-content-center">
+                    <div className="col-lg-10 col-sm-12 d-flex py-5 justify-content-center">
                         <div className="container">
                             <div className="row">
                                 <Switch>

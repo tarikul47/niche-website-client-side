@@ -6,6 +6,7 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Dashboard from './Pages/Dashboard/Dashbaord/Dashboard';
+import Products from './Pages/Home/Products/Products';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/home">
             <Home></Home>
+          </Route>
+          <Route path="/shop">
+            <Products></Products>
           </Route>
           <Route path="/dashboard">
            <Dashboard></Dashboard>
