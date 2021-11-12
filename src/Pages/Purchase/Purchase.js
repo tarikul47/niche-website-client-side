@@ -11,7 +11,7 @@ const Purchase = () => {
 
   const { user } = useAuth();
 
-  const [getData] = useGetData(`http://localhost:5000/products/${pid}`);
+  const [getData] = useGetData(`https://frozen-cliffs-93808.herokuapp.com/products/${pid}`);
 
   // single service destructuring
   const { product_name, productPrice } = getData;
@@ -20,7 +20,7 @@ const Purchase = () => {
 
   // data save for database
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/orders", data).then((res) => {
+    axios.post("https://frozen-cliffs-93808.herokuapp.com/orders", data).then((res) => {
       if (res.data.insertedId) {
         alert("Order Place Successfully");
         reset();

@@ -94,7 +94,7 @@ const useFirebase = () => {
   // save user to database
   const saveUser = (email, displayName, role) => {
     const user = { email, displayName, role: role };
-    fetch("http://localhost:5000/users", {
+    fetch("https://frozen-cliffs-93808.herokuapp.com/users", {
       method: 'POST',
       headers: {
         "content-type": "application/json",

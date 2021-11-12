@@ -30,9 +30,9 @@ function App() {
             <PrivateRoute path="/purchase/:pid">
               <Purchase></Purchase>
             </PrivateRoute>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>

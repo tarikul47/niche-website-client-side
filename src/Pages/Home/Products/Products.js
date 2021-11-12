@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import "./Products.css";
 
 const Products = () => {
-  const [getData] = useGetData("http://localhost:5000/products");
-  
+  const [getData] = useGetData("https://frozen-cliffs-93808.herokuapp.com/products");
 
   return (
     // product section
@@ -13,9 +12,7 @@ const Products = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="section-title">
-              <h2>Trending Product</h2>
-            </div>
+            <h2 className='mb-5' >Trending Product</h2>
           </div>
         </div>
         <div className="row">
