@@ -2,7 +2,7 @@ import React from "react";
 import useGetData from "../../../Hooks/useGetData";
 
 const ManageProducts = () => {
-  const [getData, setGetData] = useGetData("https://frozen-cliffs-93808.herokuapp.com/products/0");
+  const [getData, setGetData] = useGetData("https://frozen-cliffs-93808.herokuapp.com/products");
 
   const productDeleteHandle = (id) => {
     if (window.confirm("Do you want to delete?")) {

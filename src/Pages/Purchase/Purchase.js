@@ -7,11 +7,16 @@ import useGetData from "../../Hooks/useGetData";
 
 const Purchase = () => {
   const { pid } = useParams();
+
+  console.log(pid);
+
   const { register, handleSubmit, reset } = useForm();
 
   const { user } = useAuth();
 
   const [getData] = useGetData(`https://frozen-cliffs-93808.herokuapp.com/products/${pid}`);
+
+  //console.log(getData);
 
   // single service destructuring
   const { product_name, productPrice } = getData;

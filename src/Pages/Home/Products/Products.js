@@ -7,9 +7,9 @@ import { useLocation } from 'react-router-dom'
 const Products = () => {
 
   const location = useLocation();
-  const count = (location.pathname !== '/shop') ? 6 : 0; 
-  
-  const [getData] = useGetData(`https://frozen-cliffs-93808.herokuapp.com/products/${count}`);
+  const [getData] = useGetData(`https://frozen-cliffs-93808.herokuapp.com/products`);
+
+  const newProducts = (location.pathname !== '/shop')? getData.slice(0, 6) : getData; 
 
   return (
     // product section
@@ -21,7 +21,7 @@ const Products = () => {
           </div>
         </div>
         <div className="row">
-          {!getData.length ? (
+          {!newProducts.length ? (
             <>
               <div className="container">
                 <div className="row">
@@ -35,7 +35,7 @@ const Products = () => {
             </>
           ) : (
             <>
-              {getData.map((product) => (
+              {newProducts.map((product) => (
                 <div key={product._id} className="col-lg-4 col-md-6 col-12">
                   <div className="single-product">
                     <div className="product-image">
