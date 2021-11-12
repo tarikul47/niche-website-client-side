@@ -1,6 +1,6 @@
 # Getting Started with SHOPGRIDS  
 
-This project was React with [SHOPGRIDS](https://github.com/facebook/create-react-app).
+This project was React with [SHOPGRIDS](https://shop-grids-website-client-side.web.app).
 
 ## Project short description:
 
