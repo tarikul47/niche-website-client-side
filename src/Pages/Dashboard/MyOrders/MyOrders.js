@@ -1,6 +1,7 @@
 import React from "react";
 import useGetData from "../../../Hooks/useGetData";
 import useAuth from "../../../Hooks/useAuth";
+import { Link } from "react-router-dom";
 
 const MyOrders = () => {
   const { user } = useAuth();
@@ -38,10 +39,15 @@ const MyOrders = () => {
           <>
             <div className="container">
               <div className="row">
-                <div className="col-lg-3 mx-auto">
-                  <div className="spinner-border text-info" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                  </div>
+                <div className="col-lg-12 mx-auto">
+                  <h3>You don't have any order.</h3>
+                  <Link to='/shop'>
+                    <button
+                      className="w-100 btn btn-lg btn-primary mb-2"
+                    >
+                      Buy Product
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

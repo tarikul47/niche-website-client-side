@@ -40,11 +40,15 @@ const Login = () => {
                   className="form-control"
                   id="floatingPassword"
                   autoComplete="off"
+                  type="password"
                 />
                 <label htmlFor="floatingPassword">Password</label>
               </div>
 
-              <button className="w-100 btn btn-lg btn-primary mb-2" type="submit">
+              <button
+                className="w-100 btn btn-lg btn-primary mb-2"
+                type="submit"
+              >
                 login
               </button>
               <p>
@@ -55,10 +59,15 @@ const Login = () => {
                   </Link>
                 </span>
               </p>
+              <div>
+                <p>Admin Email: admin@admin.com <br /> Admin Password: 123456</p>
+              </div>
             </form>
-            {authError && <div className="alert alert-danger" role="alert">
-              {authError}
-            </div>}
+            {authError && (
+              <div className="alert alert-danger" role="alert">
+                {authError}
+              </div>
+            )}
           </div>
         </div>
       </div>

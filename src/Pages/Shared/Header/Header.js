@@ -35,11 +35,6 @@ const Header = () => {
                   SHOP
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link to="/dashboard" className="nav-link">
-                  DASHBOARD
-                </Link>
-              </li>
               {!user.email ? (
                 <>
                   <li className="nav-item">
@@ -56,11 +51,16 @@ const Header = () => {
               ) : (
                 <>
                   <li className="nav-item">
+                    <Link to="/dashboard" className="nav-link">
+                      DASHBOARD
+                    </Link>
+                  </li>
+                  <li className="nav-item">
                     <button
                       type="button"
                       className="btn btn-link text-decoration-none"
                     >
-                     {user.displayName}
+                      {user.displayName.toUpperCase()}
                     </button>
                   </li>
                   <li className="nav-item">

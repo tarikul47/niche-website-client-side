@@ -15,9 +15,8 @@ const useFirebase = () => {
   const [user, setUser] = useState({});
   const [authError, setAuthError] = useState("");
   const [loading, setloading] = useState(true);
-
   const auth = getAuth();
-
+  
   // User Register method
   const registerUser = (email, password, name, history) => {
     setloading(true);
@@ -103,6 +102,9 @@ const useFirebase = () => {
       body: JSON.stringify(user),
     }).then();
   };
+
+
+  
 
   return {
     registerUser,
