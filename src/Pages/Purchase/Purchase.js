@@ -48,7 +48,7 @@ const Purchase = () => {
                   className="form-control"
                 />
                 <label className="text-start ms-1 fw-bold" htmlFor="">
-                  Travel Spot
+                  Product Name
                 </label>
               </div>
 
@@ -92,6 +92,17 @@ const Purchase = () => {
                 </label>
               </div>
 
+              <div className="form-floating mb-2">
+                <textarea
+                  type="number"
+                  {...register("phone", { required: true })}
+                  placeholder="Phone Number"
+                  className="form-control"
+                />
+                <label className="text-start ms-1 fw-bold" htmlFor="">
+                  Phone Number
+                </label>
+              </div>
               <div className="form-floating mb-2">
                 <textarea
                   type="url"

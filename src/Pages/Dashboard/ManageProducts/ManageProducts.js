@@ -23,6 +23,13 @@ const ManageProducts = () => {
 
   return (
     <div className="container">
+      <div className="row">
+          <div className="col-12">
+            <div className="section-title">
+              <h2>Manage Products</h2>
+            </div>
+          </div>
+        </div>
       <div className="row g-1 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
         {!getData.length ? (
           <>

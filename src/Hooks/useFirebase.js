@@ -23,8 +23,11 @@ const useFirebase = () => {
     setloading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        const updateUser = { email:email, displayName: name };
+        const updateUser = { email: email, displayName: name };
         setUser(updateUser);
+
+        // user save in database
+        saveUser(email, name, 'subscriber');
 
         // update the user displayName
         updateProfile(auth.currentUser, {
@@ -38,9 +41,9 @@ const useFirebase = () => {
             // An error occurred
             // ...
           });
-        setAuthError('');
+        setAuthError("");
         //console.log(result.user);
-        history.push('/');
+        history.push("/");
       })
       .catch((error) => {
         setAuthError(error.message);
@@ -87,6 +90,18 @@ const useFirebase = () => {
         // An error happened.
       })
       .finally(() => setloading(false));
+  };
+
+  // save user to database
+  const saveUser = (email, displayName, role) => {
+    const user = { email, displayName, role: role };
+    fetch("http://localhost:5000/users", {
+      method: 'POST',
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
   };
 
   return {
