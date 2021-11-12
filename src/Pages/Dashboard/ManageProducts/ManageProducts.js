@@ -4,7 +4,7 @@ import useGetData from "../../../Hooks/useGetData";
 const ManageProducts = () => {
   const [getData, setGetData] = useGetData("http://localhost:5000/products");
 
-  const orderDeleteHandle = (id) => {
+  const productDeleteHandle = (id) => {
     if (window.confirm("Do you want to delete?")) {
       fetch(`http://localhost:5000/products/${id}`, {
         method: "DELETE",
@@ -44,7 +44,7 @@ const ManageProducts = () => {
                   <h4 className="fw-bold mb-0">{product.product_name}</h4>
                   <p>{product.product_description}</p>
                   <button
-                    onClick={() => orderDeleteHandle(product._id)}
+                    onClick={() => productDeleteHandle(product._id)}
                     className="btn btn-warning"
                   >
                     Order Delete

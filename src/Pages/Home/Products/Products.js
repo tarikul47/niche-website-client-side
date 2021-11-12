@@ -5,6 +5,7 @@ import "./Products.css";
 
 const Products = () => {
   const [getData] = useGetData("http://localhost:5000/products");
+  
 
   return (
     // product section
