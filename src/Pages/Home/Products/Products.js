@@ -2,9 +2,14 @@ import React from "react";
 import useGetData from "../../../Hooks/useGetData";
 import { Link } from "react-router-dom";
 import "./Products.css";
+import { useLocation } from 'react-router-dom'
 
 const Products = () => {
-  const [getData] = useGetData("https://frozen-cliffs-93808.herokuapp.com/products");
+
+  const location = useLocation();
+  const count = (location.pathname !== '/shop') ? 6 : 0; 
+  
+  const [getData] = useGetData(`https://frozen-cliffs-93808.herokuapp.com/products/${count}`);
 
   return (
     // product section

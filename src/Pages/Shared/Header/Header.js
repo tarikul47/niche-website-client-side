@@ -60,7 +60,7 @@ const Header = () => {
                       type="button"
                       className="btn btn-link text-decoration-none"
                     >
-                      {user.displayName.toUpperCase()}
+                      {user?.displayName.toUpperCase()}
                     </button>
                   </li>
                   <li className="nav-item">
