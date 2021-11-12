@@ -43,7 +43,7 @@ const MakeAdmin = () => {
             {getData?.map((user) => (
               <option key={user._id}
                 value={user.email}
-              >{`${user.displayName}->${user.email}`}</option>
+              >{`${user.displayName} -> ${user.email} [ ${user.role} ]`}</option>
             ))}
           </select>
         </div>
